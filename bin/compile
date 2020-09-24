@@ -17,6 +17,7 @@ APP_BASE="$(cat "${ENV_DIR}/APP_BASE")"
 echo "APP DIR ${BUILD_DIR}/${APP_BASE}"
 echo "MOVING TO STAGE ${STAGE}"
 echo "MOVING STAGE TO BUILD ${BUILD_DIR}"
+ls -l "${BUILD_DIR}/${APP_BASE}"
 
 (
 		ls -l "${BUILD_DIR}/${APP_BASE}" &&
@@ -24,6 +25,9 @@ echo "MOVING STAGE TO BUILD ${BUILD_DIR}"
     rm -rf "${BUILD_DIR}" &&
     mv "${STAGE}/$(basename "$APP_BASE")" "${BUILD_DIR}"
 )
+
+echo "BUILD DIR IS NOW.."
+ls -l "${BUILD_DIR}"
 
 if [ $? -ne 0 ]; then
     echo "FAILED to copy directory into place" | indent
