@@ -17,6 +17,12 @@ APP_BASE="$(cat "${ENV_DIR}/APP_BASE")"
 echo "APP DIR ${BUILD_DIR}/${APP_BASE}"
 echo "MOVING TO STAGE ${STAGE}"
 echo "MOVING STAGE TO BUILD ${BUILD_DIR}"
+echo "---"
+
+echo "ls -l build_dir"
+ls -l "${BUILD_DIR}"
+
+echo "ls -l build_dir/app_base"
 ls -l "${BUILD_DIR}/${APP_BASE}"
 
 (
