@@ -14,6 +14,10 @@ if [ ! -f "${ENV_DIR}/APP_BASE" ]; then
 fi
 APP_BASE="$(cat "${ENV_DIR}/APP_BASE")"
 
+echo "APP DIR ${BUILD_DIR}/${APP_BASE}"
+echo "MOVING TO STAGE ${STAGE}"
+echo "MOVING STAGE TO BUILD ${BUILD_DIR}"
+
 (
 		ls -l "${BUILD_DIR}/${APP_BASE}" &&
     mv "${BUILD_DIR}/${APP_BASE}" "${STAGE}" &&
