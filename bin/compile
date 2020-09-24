@@ -22,6 +22,12 @@ echo "---"
 echo "ls -l build_dir"
 ls -l "${BUILD_DIR}"
 
+echo "ls -l build_dir/apps"
+ls -l "${BUILD_DIR}/apps"
+
+echo "ls -l build_dir/apps/kaiju"
+ls -l "${BUILD_DIR}/apps/kaiju"
+
 echo "ls -l build_dir/app_base"
 ls -l "${BUILD_DIR}/${APP_BASE}"
 
